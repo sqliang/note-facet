@@ -1,0 +1,9 @@
+{
+  "id": "note-facet",
+  "name": "NoteFacet",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "把笔记中的多维分析字段变成可探索、有依据的阅读面板：概览、维度钻取、依据定位。",
+  "author": "NoteFacet Contributors",
+  "isDesktopOnly": false
+}

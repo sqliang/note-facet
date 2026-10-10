@@ -1,0 +1,28 @@
+/**
+ * src/styles/main.css — 面板样式源（Tailwind CSS 4）。
+ * 隔离规则（docs/06 §2）：
+ * - 完整包导入（4.3 唯一支持按需生成的形式），preflight 由构建脚本剔除；
+ * - 所有工具类统一 nf- 前缀，避免与主题/其他插件撞名；
+ * - 颜色只映射 Obsidian 主题变量，跟随明暗主题与对比度。
+ * 产物为插件根目录 styles.css（scripts/build-css.mjs 生成）。
+ */
+@import "tailwindcss" prefix(nf);
+
+/* 语义色 token：全部指向 Obsidian 主题变量，定义在面板容器上并向下继承 */
+.note-facet-panel {
+  --color-nf-bg: var(--background-primary);
+  --color-nf-bg-alt: var(--background-secondary);
+  --color-nf-text: var(--text-normal);
+  --color-nf-muted: var(--text-muted);
+  --color-nf-accent: var(--interactive-accent);
+  --color-nf-border: var(--background-modifier-border);
+
+  height: 100%;
+  font-size: var(--font-ui-small);
+}
+
+/* 面板内按钮保持文本化外观，不被主题按钮样式干扰（无层叠层，优先级高于 @layer） */
+.note-facet-panel button {
+  background: transparent;
+  box-shadow: none;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "note-facet",
+  "version": "0.1.0",
+  "description": "NoteFacet（知镜）：在 Obsidian 中把笔记的多维分析字段变成可探索、有依据的阅读面板",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build-css.mjs && node esbuild.config.mjs --production",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "deploy:dev": "node scripts/deploy.mjs dev",
+    "deploy:prod": "node scripts/deploy.mjs prod"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "yaml": "^2.9.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^0.14.0",
+    "@tailwindcss/cli": "^4.3.3",
+    "@types/node": "^26.6.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.10.0",
+    "eslint-plugin-obsidianmd": "^0.4.2",
+    "globals": "^17.12.0",
+    "obsidian": "^1.8.7",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.1"
+  }
+}
