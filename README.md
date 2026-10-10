@@ -1,6 +1,6 @@
 # NoteFacet · 知镜
 
-> 状态：初版实现（P0 阅读闭环）。尚未在真实 Obsidian 库中完成运行验收，验收任务与通过条件见 [docs/05](./docs/05-sample-acceptance.md)。
+> 状态：初版实现（P0 阅读闭环）已于 2026-10-10 在真实 Obsidian 库中完成运行验收，T1–T10 交互任务与异常用例全部通过。验收任务、通过条件与验证记录见 [docs/05](./docs/05-sample-acceptance.md)。
 
 **打开一篇笔记，看清多维判断，沿着依据找到重点。**
 
@@ -46,7 +46,7 @@ npm run deploy:prod  # 生产构建并部署到本地库（发布前验证）
 
 - 纯逻辑（解析、字段映射、指标适配、状态机）全部单元测试先行（TDD），样本驱动断言基于 `test-files/` 真实样本。
 - `npm run check` = `tsc --noEmit` + `eslint`（含官方 `eslint-plugin-obsidianmd` 规则）+ `vitest run`，三者全绿才算改动完成。
-- Obsidian 宿主行为（面板渲染、定位跳转、模式切换）按 [docs/05](./docs/05-sample-acceptance.md) 的任务清单人工验收。
+- Obsidian 宿主行为（面板渲染、定位跳转、模式切换）按 [docs/05](./docs/05-sample-acceptance.md) 的任务清单人工验收，P0 已于 2026-10-10 通过。
 
 ## License
 
